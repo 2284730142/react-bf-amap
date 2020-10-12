@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Index from "./lib";
+// import BFAMap from "./lib/index";
+import BFAMap from "./lib/index2";
 
 ReactDOM.render(
   <div style={{ width: '600px', height: '600px' }}>
     {/* eslint-disable-next-line react/jsx-pascal-case */}
-    <Index
+    <BFAMap
       id="a_map"
       map_key={window.AMAP_KEY}
       options={{

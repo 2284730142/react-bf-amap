@@ -11,7 +11,7 @@ import * as AMapLoader from '@amap/amap-jsapi-loader';
 //   plugins: string[];
 // }
 
-const Index = (props) => {
+const BFAMap = (props) => {
 
   // 参数,plugins:[], id 需要在全局配置
   const { AMapUI, loca, plugins, setMap, options, id, map_key } = props;
@@ -26,11 +26,9 @@ const Index = (props) => {
       plugins: plugins?.map(im => `AMap.${im}`) || [], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
     };
     if (AMapUI) {
-      // @ts-ignore
       option = { ...option, AMapUI: AMapUI };
     }
     if (loca) {
-      // @ts-ignore
       option = { ...option, Loca: { version: '1.3.2' } };
     }
     AMapLoader.load({ ...option }).then((AMap) => {
@@ -58,7 +56,7 @@ const Index = (props) => {
   );
 };
 
-export default Index;
+export { BFAMap };
 
 // AMapUI: {           // 是否加载 AMapUI，缺省不加载
 //   version: '1.1',   // AMapUI 缺省 1.1

@@ -10,7 +10,7 @@ import * as AMapLoader from '@amap/amap-jsapi-loader'; // export interface BF_AM
 //   plugins: string[];
 // }
 
-var BFAMap = function BFAMap(props) {
+var BFAMap = function(props) {
   // 参数,plugins:[], id 需要在全局配置
   var AMapUI = props.AMapUI,
       loca = props.loca,
@@ -71,7 +71,7 @@ var BFAMap = function BFAMap(props) {
   });
 };
 
-export { BFAMap }; // AMapUI: {           // 是否加载 AMapUI，缺省不加载
+export default BFAMap; // AMapUI: {           // 是否加载 AMapUI，缺省不加载
 //   version: '1.1',   // AMapUI 缺省 1.1
 //   plugins: [],      // 需要加载的 AMapUI ui插件
 // },
