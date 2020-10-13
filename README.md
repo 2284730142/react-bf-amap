@@ -1,5 +1,5 @@
 # React BF AMap
-###### React版本的AMap插件，使用AMap2.0版本，并通过JSAPI Loader进行地图加载工作
+###### React版本的AMap插件，使用AMap2.0版本，并通过JS API Loader进行地图加载工作
 
 #### 安装
 
@@ -36,6 +36,7 @@
     export default Map;
     
 ##### 重要：
+
     1. 一定要添加外容器，并保证外容器存在实际大小
     2. 确保你已经申请过高德地图的key，并能够引入改组件中使用
 
@@ -49,6 +50,13 @@
    | plugins | string[] | 是 | 地图插件 | ['Scale', 'OverView', 'ToolBar'] |
    | loca | boolean | 否 | loca插件使用，暂时固定使用1.3.2版本 | false |
    | AMapUI | object | 是 | AMapUI插件 | { version: '1.1', plugins: [] } |
+   | setMap | function | 是 | 设置地图, 返回值 map:地图实例,AMap:AMap函数,后续所有地图相关操作应该都在这里进行 | (map,AMap)=>{} |
+   
+#### AMap地图相关文档
+
+   [AMap JS API v2.0](https://lbs.amap.com/api/jsapi-v2/summary)
+   
+   [AMapUI JS API v2.0](https://lbs.amap.com/api/amap-ui/intro)
 
 #### License
 

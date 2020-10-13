@@ -22,9 +22,7 @@ const BFAMap = (props) => {
   };
   useEffect(() => {
     if (map.current) {
-      // @ts-ignore
       map.current.style.width = '100%';
-      // @ts-ignore
       map.current.style.height = '100%';
       initMap();
     }

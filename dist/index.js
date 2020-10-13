@@ -45,9 +45,7 @@ var BFAMap = function BFAMap(props) {
 
   useEffect(function () {
     if (map.current) {
-      // @ts-ignore
-      map.current.style.width = '100%'; // @ts-ignore
-
+      map.current.style.width = '100%';
       map.current.style.height = '100%';
       initMap();
     }
