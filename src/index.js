@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import BFAMap from "./lib/index";
-import BFAMap from "./lib/index2";
+import { BFAMap } from "./lib/index";
 
 ReactDOM.render(
   <div style={{ width: '600px', height: '600px' }}>

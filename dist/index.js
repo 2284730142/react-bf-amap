@@ -1,17 +1,8 @@
 import _objectSpread from "@babel/runtime/helpers/esm/objectSpread2";
 import React, { useEffect, useRef } from 'react';
-import * as AMapLoader from '@amap/amap-jsapi-loader'; // export interface BF_AMapProps {
-//   AMapUI: any;
-//   loca: boolean;
-//   key: string;
-//   id: string;
-//   options: any;
-//   setMap: Function;
-//   plugins: string[];
-// }
+import * as AMapLoader from '@amap/amap-jsapi-loader';
 
 var BFAMap = function BFAMap(props) {
-  // 参数,plugins:[], id 需要在全局配置
   var AMapUI = props.AMapUI,
       loca = props.loca,
       plugins = props.plugins,
@@ -19,7 +10,6 @@ var BFAMap = function BFAMap(props) {
       options = props.options,
       id = props.id,
       map_key = props.map_key;
-  console.log(map_key);
   var map = useRef();
 
   var initMap = function initMap() {
@@ -61,7 +51,7 @@ var BFAMap = function BFAMap(props) {
       map.current.style.height = '100%';
       initMap();
     }
-  }, [map]);
+  });
   if (!setMap || typeof setMap !== 'function') return null;
   if (!id) console.error('没有传入唯一ID！，There is no id!');
   if (!map_key) console.error('没有传入key！，There is no map key!');
@@ -71,10 +61,4 @@ var BFAMap = function BFAMap(props) {
   });
 };
 
-export { BFAMap }; // AMapUI: {           // 是否加载 AMapUI，缺省不加载
-//   version: '1.1',   // AMapUI 缺省 1.1
-//   plugins: [],      // 需要加载的 AMapUI ui插件
-// },
-// Loca: {             // 是否加载 Loca， 缺省不加载
-//   version: '1.3.2'  // Loca 版本，缺省 1.3.2
-// },
+export { BFAMap };
