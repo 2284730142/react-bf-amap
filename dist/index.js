@@ -44,12 +44,10 @@ var BFAMap = function BFAMap(props) {
   };
 
   useEffect(function () {
-    if (map.current) {
-      map.current.style.width = '100%';
-      map.current.style.height = '100%';
-      initMap();
-    }
-  });
+    map.current.style.width = '100%';
+    map.current.style.height = '100%';
+    initMap();
+  }, []);
   if (!setMap || typeof setMap !== 'function') return null;
   if (!id) console.error('没有传入唯一ID！，There is no id!');
   if (!map_key) console.error('没有传入key！，There is no map key!');
